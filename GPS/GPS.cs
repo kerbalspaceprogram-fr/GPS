@@ -38,6 +38,7 @@ namespace GPS
 
 			GUILayout.Label("Latitude: " + latitude, GUILayout.ExpandWidth (true));
 			GUILayout.Label("Longitude: " + longitude, GUILayout.ExpandWidth (true));
+			GUILayout.Label("Speed: " + Math.Floor(this.vessel.srf_velocity.magnitude * 3.6) + "km/h" , GUILayout.ExpandWidth (true));
 
 			if (GUILayout.Button ("Close", GUILayout.ExpandWidth (true))) RenderingManager.RemoveFromPostDrawQueue (3, new Callback (GpsGui));
 
